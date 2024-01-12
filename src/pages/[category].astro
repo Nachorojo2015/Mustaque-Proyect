@@ -53,7 +53,7 @@ const PRODUCTS = products.filter((p) =>
                         30% OFF
                     </span>
                     <div class="w-full mx-auto object-cover">
-                        <a href={`product/${product.id}`}><img src={product.img} alt=""/></a>
+                        <a href={`/product/${product.id}`}><img src={product.img} alt=""/></a>
                     </div>
                     <div class="text-center mt-2 p-2">
                         <p class="text-sm font-medium">{product.name}</p>
@@ -71,7 +71,7 @@ const PRODUCTS = products.filter((p) =>
                             <b>${(product.price / 3).toFixed(2)}</b>
                         </p>
                         <a
-                            href={`product/${product.id}`}
+                            href={`/product/${product.id}`}
                             class="hover:text-orange-500 duration-150"
                         >
                             <strong>Ver más detalles</strong>
