@@ -464,7 +464,8 @@
       iconoMenu.classList.remove("pointer-events-none");
       document.getElementById("main").classList.remove("cursor-pointer");
     });
-  
+
+    if(!localStorage.getItem("carrito")) localStorage.setItem("carrito",JSON.stringify([]))
     const numberCartProducts = document.getElementById("cart-quantity-products");
     numberCartProducts.textContent = JSON.parse(
       localStorage.getItem("carrito"),
