@@ -346,7 +346,8 @@
   <script>
     //Hover header
     const header = document.getElementById("header");
-    if (window.location.href.split("/").slice(-1)[0]) {
+    console.log(window.location.href)
+    if (window.location.href.split("").filter(l=>l==='/').length > 3) {
       header.classList.add("bg-black");
     } else {
       //Mobile
