@@ -1,0 +1,264 @@
+---
+import Layout from "../layouts/Layout.astro";
+import products from "../../products.json";
+
+const firstProducts = products.slice(0, 9);
+---
+
+<Layout title="Tienda Online de Mustaque Proyecto">
+    <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide p-[20px] hidden md:inline-block"
+        data-bs-ride="carousel"
+    >
+        <div class="carousel-inner w-full">
+            <div class="carousel-item active">
+                <img
+                    src="img/banner-images/expect-1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="img/banner-images/expect-2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="img/banner-images/expect-3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="img/banner-images/expect-4.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="img/banner-images/expect-5.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="img/banner-images/expect-6.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+        </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Mobile Image -->
+    <img
+        src="/img/banner-images/mobile-images/fondo-mobile.jpg"
+        alt=""
+        class="inline-block md:hidden w-full p-3"
+    />
+    <!--  -->
+    <div
+        class="flex flex-wrap items-center justify-around text-[20px] mt-[30px] text-center p-2"
+    >
+        <div class="p-5">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-truck mx-auto w-[100px] h-[100px]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+                    d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+                    d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"
+                ></path></svg
+            >
+            <p>Envios a todo el país</p>
+        </div>
+        <div class="p-5">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-credit-card-filled mx-auto w-[100px] h-[100px]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M22 10v6a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-6h20zm-14.99 4h-.01a1 1 0 1 0 .01 2a1 1 0 0 0 0 -2zm5.99 0h-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0 -2zm5 -10a4 4 0 0 1 4 4h-20a4 4 0 0 1 4 -4h12z"
+                    stroke-width="0"
+                    fill="currentColor"></path></svg
+            >
+            <p>Hasta 3 cuotas sin interes</p>
+        </div>
+        <div class="p-5">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-shield-lock-filled mx-auto w-[100px] h-[100px]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm.002 7a2 2 0 0 0 -1.995 1.85l-.005 .15l.005 .15a2 2 0 0 0 .995 1.581v1.769l.007 .117a1 1 0 0 0 1.993 -.117l.001 -1.768a2 2 0 0 0 -1.001 -3.732z"
+                    stroke-width="0"
+                    fill="currentColor"></path></svg
+            >
+            <p>Compra de manera segura</p>
+        </div>
+    </div>
+    <h2 class="text-center font-bold text-[40px] mt-20">
+        Productos destacados
+    </h2>
+    <section class="flex flex-wrap items-center justify-around space-y-6 mt-5">
+        {
+            firstProducts.map((product) => (
+                <div class="shadow-md w-[90%] md:w-[23%] mt-5" id="product">
+                    <span class="p-2 m-2 rounded-full bg-red-700 px-2 text-center text-sm font-bold text-white absolute z-10">
+                        30% OFF
+                    </span>
+                    <div class="w-full mx-auto object-cover">
+                        <a href={`product/${product.id}`}>
+                            <img src={product.img} alt="" />
+                        </a>
+                    </div>
+                    <div class="text-center mt-2 p-2">
+                        <p class="text-sm font-medium">{product.name}</p>
+                        <p class="font-bold">
+                            ${product.price}{" "}
+                            <span class="text-gray-300">
+                                <del>
+                                    $
+                                    {product.price + (product.price * 30) / 100}
+                                </del>
+                            </span>
+                        </p>
+                        <p class="text-xs">
+                            <b>3</b> cuotas sin interés de{" "}
+                            <b>${(product.price / 3).toFixed(2)}</b>
+                        </p>
+                        <a
+                            href={`product/${product.id}`}
+                            class="hover:text-orange-500 duration-150"
+                        >
+                            <strong>Ver más detalles</strong>
+                        </a>
+                    </div>
+                </div>
+            ))
+        }
+    </section>
+    <div class="text-center mt-52 mx-auto">
+        <h1 class="font-bold text-[30px] md:text-[70px]">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-instagram inline w-20 h-20"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                ></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+                ></path><path d="M16.5 7.5l0 .01"></path></svg
+            >Mustaque.arg
+        </h1>
+        <button
+            type="button"
+            class="text-white mt-2 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-[20px] text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            >Seguinos</button
+        >
+    </div>
+    <h3 class="font-bold text-center text-[25px] md:text-[60px] mt-40">
+        Mustaqe Indumentaria S.A.
+    </h3>
+    <p class="text-center text-[20px] mt-2">Todos los derechos reservados.</p>
+    <h4 class="text-center font-bold mt-24 text-[25px] md:text-[45px]">
+        Recibí todas las ofertas
+    </h4>
+    <div class="p-10">
+        <p class="text-center mt-10">
+            ¿Querés recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a
+            disfrutarlas!
+        </p>
+    </div>
+    <div class="flex items-center justify-center">
+        <input
+            type="text"
+            placeholder="Email"
+            class="w-[60%] rounded-[20px] p-2 border mt-4 placeholder-opacity-0 focus:placeholder-opacity-100"
+        />
+    </div>
+    <div class="text-center">
+        <button
+            type="button"
+            class="text-white mt-2 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-[20px] text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            >Enviar</button
+        >
+    </div>
+</Layout>
+
+<style>
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 25%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+
+    #product {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+
+        animation-timeline: --image;
+        animation-name: show;
+
+        animation-range: entry 25% cover 50%;
+        animation-fill-mode: both;
+    }
+</style>

@@ -1,0 +1,274 @@
+[
+    {
+        "id": 1,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-07-28-at-16-01-37-11-daa13d7f15047320bb16905719371959-1024-1024.webp",
+        "name": "Remeron Fear of God",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 2,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/peace_crudo_3d1-e29df22a2a3be09fb316934042126847-1024-1024.webp",
+        "name": "Remeron Peace",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 3,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/the-pray_negro_espalda1-390924379b033f629216911768505156-1024-1024.webp",
+        "name": "Remeron the Pray",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 4,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/61-3e927bfb8ac25a652a16787220421103-1024-1024.webp",
+        "name": "Remeron Baby Cupido",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 5,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/bbf23e41-ee1c-4a7d-8ae0-481553c6860a1-2e752ae2cff465355f16787224121142-1024-1024.webp",
+        "name": "Remeron Fuck Off 2",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 6,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/a5ba9a33-a9b2-4dee-a95e-bf399eb24fdb11-13649e51124a295a6516787317866668-1024-1024.webp",
+        "name": "Remeron Dollar",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 7,
+        "img":"https://acdn.mitiendanube.com/stores/001/214/214/products/short-peace-4-4e432757096ce2b81d17020442696409-1024-1024.webp",
+        "name": "Short peace",
+        "price": 35990,
+        "category": "Shorts",
+        "accessory": false
+    },
+    {
+        "id": 8,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/short-fear-of-god-e51666675ec591983a17016962879531-1024-1024.webp",
+        "name": "Short fear of god",
+        "price": 35990,
+        "category": "Shorts",
+        "accessory": false
+    },
+    {
+        "id": 9,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/frente-short-2-add6b97186b50844ab17020443864087-1024-1024.webp",
+        "name": "Short work hard",
+        "price": 35990,
+        "category": "Shorts",
+        "accessory": false
+    },
+    {
+        "id": 10,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-06-02-at-4-42-38-pm1-743c237d40885a201c17013741443083-1024-1024.jpeg",
+        "name": "Buzo Cupido Pasamontañas OVERSIZE",
+        "price": 49990,
+        "category": "Buzos",
+        "accessory": false
+    },
+    {
+        "id": 11,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/remeron-smile-59cb39f8827e035b0317016961564613-1024-1024.png",
+        "name": "Remeron Smile",
+        "price": 24990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 12,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/the-world-is-mine-negro-sin-bolsillo-5ecb06aee5e16df43117012599508197-1024-1024.png",
+        "name": "Buzo World is mine OVERSIZE",
+        "price": 49990,
+        "category": "Buzos",
+        "accessory": false
+    },
+    {
+        "id": 13,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/angel-hand-negro1-4a224a46a89eb37c8916911765495736-1024-1024.png",
+        "name": "Buzo Angel Hand",
+        "price": 37990,
+        "category": "Buzos",
+        "accessory": false
+    },
+    {
+        "id": 14,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/remeron_blanco_angeles-enfrentados_3d1-b2072cfe23caf13e2216908989098616-1024-1024.png",
+        "name": "Remeron Angel",
+        "price": 24990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 15,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-29-at-11-37-471-84830823f80ffce1ae16853722610181-1024-1024.jpeg",
+        "name": "Buzo Skeleton Deam",
+        "price": 42990,
+        "category": "Buzos",
+        "accessory": false
+    },
+    {
+        "id": 16,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-15-43-06-31-ac3b6710c9b9f021a716830569209961-1024-1024.jpeg",
+        "name": "Medias DOBERMAN",
+        "price": 3890,
+        "category": "Medias",
+        "accessory": true
+    },
+    {
+        "id": 17,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-15-43-07-21-0a53a6f011cf11cf3616830570040526-1024-1024.jpeg",
+        "name": "Medias BABY CUPIDO",
+        "price": 3890,
+        "category": "Medias",
+        "accessory": true
+    },
+    {
+        "id": 18,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-15-43-071-f5eb9cf8c6be0fd74216830571346150-1024-1024.jpeg",
+        "name": "Medias FEAR OF GOD",
+        "price": 3890,
+        "category": "Medias",
+        "accessory": true
+    },
+    {
+        "id": 19,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/51-eeb1c65f4334ac4ff416787216562898-1024-1024.webp",
+        "name": "Remeron Dober",
+        "price": 28990,
+        "category": "Remerones",
+        "accessory": false
+    },
+    {
+        "id": 20,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-06-02-at-4-43-23-pm-11-0f6902fa140da1c52a16866608341946-1024-1024.webp",
+        "name": "Pantalón Pasamontañas",
+        "price": 39990,
+        "category": "Pantalones",
+        "accessory": false
+    },
+    {
+        "id": 21,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-06-02-at-10-30-41-am1-e73b0413679ccc144c16857160082163-1024-1024.webp",
+        "name": "Pantalón Chains",
+        "price": 39990,
+        "category": "Pantalones",
+        "accessory": false
+    },
+    {
+        "id": 22,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-06-01-at-4-42-21-pm1-254479aa40107d82e316856493911289-1024-1024.webp",
+        "name": "Pantalón Skeleton Deam",
+        "price": 39990,
+        "category": "Pantalones",
+        "accessory": false
+    },
+    {
+        "id": 23,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-29-at-11-41-571-e4fd670ea99affd77916853741140140-1024-1024.webp",
+        "name": "Pantalón Fear of God",
+        "price": 39990,
+        "category": "Pantalones",
+        "accessory": false
+    },
+    {
+        "id": 24,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-42-21-c625ef1d7f37e4f1a716830533172699-1024-1024.webp",
+        "name": "Gorro de lana CROSS RELIGION - Negro",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 25,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-27-141-418eea80bac021969016830539591605-1024-1024.webp",
+        "name": "Gorro de Lana FEAR OF GOD - Blanco",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 26,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-27-121-948c1c831eb255451316830543309600-1024-1024.webp",
+        "name": "Gorro de Lana BABY CUPIDO - Blanco",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 27,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-27-131-2811e8e173882a4d1416830542162413-1024-1024.webp",
+        "name": "Gorro de Lana FUCK OFF - Blanco",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 28,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-27-81-94975f9d50e6c0290116830549510914-1024-1024.webp",
+        "name": "Gorro de Lana FEAR OF GOD - Azul",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 29,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-27-41-8ce1c9b7019cac1e7d16830553901476-1024-1024.webp",
+        "name": "Gorro de Lana BUTTERFLY - Gris",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 30,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/whatsapp-image-2023-05-02-at-10-41-42-11-acf2a363d5c8ff302116830534889903-1024-1024.webp",
+        "name": "Gorro de Lana FEAR OF GOD - Fucsia",
+        "price": 7990,
+        "category": "Gorros",
+        "accessory": true
+    },
+    {
+        "id": 31,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/conjunto-fear-con-short-remeron-c62cc7ef83bca7655f17020400589400-1024-1024.webp",
+        "name": "Conjunto Fear of God",
+        "price": 58990,
+        "category": "Conjuntos",
+        "accessory": false
+    },
+    {
+        "id": 32,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/conjunto-fear-con-short-remeron-crudo-48a6a819891f4b5ef217020415833029-1024-1024.png",
+        "name": "Conjunto Fear of God",
+        "price": 58990,
+        "category": "Conjuntos",
+        "accessory": false
+    },
+    {
+        "id": 33,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/conjunto-reme-negro-short-negro-089c17e7cdaab56ce417020413282190-1024-1024.webp",
+        "name": "Conjunto Peace",
+        "price": 58990,
+        "category": "Conjuntos",
+        "accessory": false
+    },
+    {
+        "id": 34,
+        "img": "https://acdn.mitiendanube.com/stores/001/214/214/products/conjunto-reme-negro-short-negro22-0ea0b3b4789aadcd5a17020404530823-1024-1024.webp",
+        "name": "Conjunto Peace",
+        "price": 58990,
+        "category": "Conjuntos",
+        "accessory": false
+    }
+]

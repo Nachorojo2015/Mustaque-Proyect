@@ -1,0 +1,585 @@
+<header class="fixed z-[20] w-full p-[20px]">
+    <nav
+      class="flex items-center justify-between transition-all duration-300 pt-4 pb-4 md:pt-2 md:pb-2 w-full"
+      id="header"
+    >
+      <div class="flex items-center justify-center space-x-5 ml-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="icono-menu"
+          class="icon icon-tabler icon-tabler-menu-2 cursor-pointer text-white"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
+          ></path></svg
+        >
+        <input
+          type="text"
+          placeholder="Buscar"
+          class="rounded-3xl border-[2px] bg-transparent w-[300px] p-1 outline-none placeholder:text-white placeholder:pl-1 placeholder:text-[14px] focus:text-white hidden md:inline-block"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-search absolute translate-x-[140px] cursor-pointer text-white hidden md:inline-block"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path
+            d="M21 21l-6 -6"></path></svg
+        >
+      </div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-shopping-bag text-white cursor-pointer mr-3"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          id="cart-menu"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+          ></path><path d="M9 11v-5a3 3 0 0 1 6 0v5"></path></svg
+        >
+        <span
+          class="absolute translate-x-4 -translate-y-7 bg-black rounded-full pr-1 pl-1 pt-[0.5px] pb-[0.5px] text-white text-[8px]"
+          id="cart-quantity-products"></span>
+      </div>
+    </nav>
+    <!-- Menu aside -->
+    <div
+      class="-translate-x-[600px] bg-[#ffffff] w-[85%] md:w-[23%] h-[104vh] absolute top-0 left-0 transition-all ease-linear duration-300 rounded-[12px] overflow-scroll overflow-x-hidden"
+      id="menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-arrow-bar-right mt-3 ml-3 cursor-pointer"
+        width="24"
+        height="24"
+        id="cerrar-menu"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M20 12l-10 0"></path><path d="M20 12l-4 4"></path><path
+          d="M20 12l-4 -4"></path><path d="M4 4l0 16"></path></svg
+      >
+      <div class="mx-auto text-center mt-5">
+        <input
+          type="text"
+          placeholder="Buscar"
+          class="p-3 bg-gray-100 w-[95%] inline-block md:hidden"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-search absolute right-0 -translate-x-5 -translate-y-10 cursor-pointer md:hidden"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path
+            d="M21 21l-6 -6"></path></svg
+        >
+      </div>
+      <ul class="pt-[20px] pr-0 pb-[20px] pl-0 mt-[5px] list-none">
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            ><a href="/">INICIO</a></b
+          >
+        </li>
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer mt-3"
+          id="productosNavbar"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            >PRODUCTOS</b
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-down inline-block ml-[50px]"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            id="under-arrow-products"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12 5l0 14"></path><path d="M16 15l-4 4"></path><path
+              d="M8 15l4 4"></path></svg
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-left hidden"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            id="left-arrow-products"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M5 12l14 0"></path><path d="M5 12l4 4"></path><path
+              d="M5 12l4 -4"></path></svg
+          >
+        </li>
+        <div
+          class="mx-3 text-[14px] hidden transition-all duration-1000 ease-out"
+          id="productos-section"
+        >
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/allProducts">Ver todos los productos</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Buzos">HOODIES/BUZOS</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Remerones">REMERONES</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Pantalones">PANTALONES</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Shorts">SHORTS</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Conjuntos">CONJUNTOS</a>
+          </li>
+          <li class="p-2 duration-150 cursor-pointer" id="accesoriosNavbar">
+            ACCESORIOS<svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-narrow-down inline-block ml-5"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              id="under-arrow-accesories"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M12 5l0 14"></path><path d="M16 15l-4 4"></path><path
+                d="M8 15l4 4"></path></svg
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-narrow-left hidden"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              id="left-arrow-accesories"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M5 12l4 4"></path><path
+                d="M5 12l4 -4"></path></svg
+            >
+          </li>
+        </div>
+        <div
+          class="mx-3 text-[14px] transition-all duration-1000 ease-out hidden"
+          id="accesorios-section"
+        >
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/allAccesories">Ver todo en ACCESORIOS</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Gorros">GORROS</a>
+          </li>
+          <li class="p-2 hover:text-red-500 duration-150">
+            <a href="/Medias">MEDIAS</a>
+          </li>
+        </div>
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer mt-3"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            ><a href="/stores">STORES</a></b
+          >
+        </li>
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer mt-3"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            ><a href="/como-comprar">CÓMO COMPRAR</a></b
+          >
+        </li>
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer mt-3"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            ><a href="/preguntas-frecuentes">PREGUNTAS FRECUENTES</a></b
+          >
+        </li>
+        <li
+          class="text-black font-bold block text-[15px] no-underline p-2 cursor-pointer mt-3"
+        >
+          <b class="hover:text-orange-500 duration-150 transition-all ease-in"
+            ><a href="/politica-de-cambios">POLÍTICA DE CAMBIOS</a></b
+          >
+        </li>
+      </ul>
+      <hr class="mt-[5px] md:mt-[210px]" />
+      <div class="flex items-center justify-center mt-3 pt-2 pb-3 space-x-12">
+        <div class="bg-black p-2 rounded-[20px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-user text-white"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path
+              d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg
+          >
+        </div>
+        <div class="flex items-center justify-center space-x-5 text-[14px] mr-3">
+          <a href="" class="hover:text-red-500 duration-150">Crear cuenta</a>
+          <a href="" class="hover:text-red-500 duration-150">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+    <!-- Cart Menu -->
+    <div
+      class="bg-[#ffffff] w-full md:w-[35%] h-[104vh] absolute top-0 right-0 transition-all ease-linear duration-300 md:rounded-[12px] translate-x-[600px] overflow-scroll overflow-x-hidden z-[100]"
+      id="cart-menu-content"
+    >
+      <div class="md:flex items-center justify-around hidden">
+        <p class="mt-[50px] ml-[20px] text-2xl font-bold">Carrito de Compras</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-x inline-block cursor-pointer mt-[45px] ml-[150px]"
+          id="close-cart-menu"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+        >
+      </div>
+      <!-- MOBILE CART -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-arrow-bar-left w-12 mt-3 inline-block md:hidden"
+        width="24"
+        height="24"
+        id="close-cart-menu-mobile"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 12l10 0"></path><path d="M4 12l4 4"></path><path d="M4 12l4 -4"
+        ></path><path d="M20 4l0 16"></path></svg
+      >
+      <p
+        class="mt-[50px] ml-[20px] text-2xl font-bold text-center block md:hidden"
+      >
+        Carrito de Compras
+      </p>
+      <!--  -->
+      <p
+        class="bg-transparent text-center mx-auto text-blue-300 py-2 px-4 border border-blue-300 rounded-[20px] mt-[50px] w-[90%]"
+        id="carritoCantidad"
+      >
+        El carrito de compras está vacío.
+      </p>
+      <div
+        class="mt-5 mx-auto flex items-center justify-center space-y-5 flex-col"
+        id="containerProductsCart"
+      >
+        <!-- PRODUCTS CART WITH JS -->
+      </div>
+      <div class="mt-[100px]" id="totalProducts">
+        <!-- Total de la compra -->
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    //Hover header
+    const header = document.getElementById("header");
+    if (window.location.href.split("/").slice(-1)[0]) {
+      header.classList.add("bg-black");
+    } else {
+      //Mobile
+      if (window.innerWidth > 300 && window.innerWidth < 500) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 450) {
+            header.classList.add("bg-black");
+          } else {
+            header.classList.remove("bg-black");
+          }
+        });
+      } else {
+        if (window.scrollY > 600) header.classList.add("bg-black");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 600) {
+            header.classList.add("bg-black");
+          } else {
+            header.classList.remove("bg-black");
+          }
+        });
+      }
+    }
+  
+    //Menu aside Productos
+    const botonCart = document.getElementById("cart-menu");
+    const iconoMenu = document.querySelector("#icono-menu"),
+      menu = document.querySelector("#menu");
+  
+    iconoMenu.addEventListener("click", (e) => {
+      document.body.classList.toggle("opacidad");
+      menu.classList.toggle("-translate-x-[600px]");
+      botonCart.classList.add("pointer-events-none");
+      document.getElementById("main").classList.add("cursor-pointer");
+      document.getElementById("main").addEventListener("click", () => {
+        document.body.classList.remove("opacidad");
+        menu.classList.add("-translate-x-[600px]");
+        document.getElementById("main").classList.remove("cursor-pointer");
+        botonCart.classList.remove("pointer-events-none");
+      });
+    });
+  
+    const botonCerrarMenu = document.getElementById("cerrar-menu");
+    botonCerrarMenu.addEventListener("click", () => {
+      menu.classList.toggle("-translate-x-[600px]");
+      document.body.classList.remove("opacidad");
+      botonCart.classList.remove("pointer-events-none");
+      document.getElementById("main").classList.remove("cursor-pointer");
+    });
+  
+    //Mostrar productos
+    const accesoriosSection = document.getElementById("accesorios-section");
+    const productosNavbar = document.getElementById("productosNavbar");
+    const productosSection = document.getElementById("productos-section");
+    productosNavbar.addEventListener("click", () => {
+      productosSection.classList.toggle("hidden");
+      const underArrowProducts = document.getElementById("under-arrow-products");
+      const leftArrowProducts = document.getElementById("left-arrow-products");
+      underArrowProducts.classList.toggle("hidden");
+      leftArrowProducts.classList.toggle("hidden");
+      leftArrowProducts.classList.toggle("inline-block");
+      leftArrowProducts.classList.toggle("ml-[50px]");
+      accesoriosSection.classList.add("hidden");
+    });
+  
+    //Mostrar accesorios
+    const accesoriosNavbar = document.getElementById("accesoriosNavbar");
+    // const accesoriosSection = document.getElementById("accesorios-section");
+    accesoriosNavbar.addEventListener("click", () => {
+      accesoriosSection.classList.toggle("hidden");
+      const underArrowAccesories = document.getElementById(
+        "under-arrow-accesories",
+      );
+      const leftArrowAccesories = document.getElementById(
+        "left-arrow-accesories",
+      );
+      underArrowAccesories.classList.toggle("hidden");
+      leftArrowAccesories.classList.toggle("hidden");
+      leftArrowAccesories.classList.toggle("inline-block");
+      leftArrowAccesories.classList.toggle("ml-5");
+    });
+  
+    //Mostrar el menu del carrito
+    botonCart.addEventListener("click", () => {
+      const cartMenuContent = document.getElementById("cart-menu-content");
+      cartMenuContent.classList.remove("translate-x-[600px]");
+      document.body.classList.add("opacidad");
+      iconoMenu.classList.add("pointer-events-none");
+      document.getElementById("main").classList.add("cursor-pointer");
+      document.getElementById("main").addEventListener("click", () => {
+        document.body.classList.remove("opacidad");
+        cartMenuContent.classList.add("translate-x-[600px]");
+        document.getElementById("main").classList.remove("cursor-pointer");
+        iconoMenu.classList.remove("pointer-events-none");
+      });
+    });
+    //Cerrar el menu del carrito
+    //PC
+    const buttonCloseCart = document.getElementById("close-cart-menu");
+    buttonCloseCart.addEventListener("click", () => {
+      const cartMenuContent = document.getElementById("cart-menu-content");
+      cartMenuContent.classList.add("translate-x-[600px]");
+      document.body.classList.remove("opacidad");
+      iconoMenu.classList.remove("pointer-events-none");
+      document.getElementById("main").classList.remove("cursor-pointer");
+    });
+    //Mobile
+    const buttonCloseCartMobile = document.getElementById(
+      "close-cart-menu-mobile",
+    );
+    buttonCloseCartMobile.addEventListener("click", () => {
+      const cartMenuContent = document.getElementById("cart-menu-content");
+      cartMenuContent.classList.add("translate-x-[600px]");
+      document.body.classList.remove("opacidad");
+      iconoMenu.classList.remove("pointer-events-none");
+      document.getElementById("main").classList.remove("cursor-pointer");
+    });
+  
+    const numberCartProducts = document.getElementById("cart-quantity-products");
+    numberCartProducts.textContent = JSON.parse(
+      localStorage.getItem("carrito"),
+    ).length;
+  
+    function showProducts(productsCart) {
+      const containerProductsCart = document.getElementById(
+        "containerProductsCart",
+      );
+      const totalProducts = document.getElementById("totalProducts");
+      const cantidadCarrito = document.getElementById("carritoCantidad");
+      if (productsCart.length === 0) {
+        cantidadCarrito.classList.remove("hidden");
+      } else {
+        cantidadCarrito.classList.add("hidden");
+      }
+      if (productsCart.length === 0) {
+        totalProducts.classList.add("hidden");
+      } else {
+        totalProducts.classList.remove("hidden");
+      }
+      containerProductsCart.innerHTML = "";
+      let sumTotal = 0;
+      productsCart.forEach((p) => {
+        sumTotal += p.price * p.quantity;
+        containerProductsCart.innerHTML += `
+          <div class="flex items-center justify-around mx-auto w-full px-2">
+            <div>
+              <img src=${p.img} alt="" class="w-28"/>
+            </div>
+            <div class=w-[50%]>
+              <p>${p.name} <span class="text-gray-400">(${p.category})</span></p>
+              <p>Cantidad: ${p.quantity}</p>
+              <p class="font-bold">$${p.price * p.quantity}</p>
+            </div>
+            <div>
+              <button id=${p.id} class=buttonsDelete>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-trash-filled"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M20 6a1 1 0 0 1 .117 1.993l-.117 .007h-.081l-.919 11a3 3 0 0 1 -2.824 2.995l-.176 .005h-8c-1.598 0 -2.904 -1.249 -2.992 -2.75l-.005 -.167l-.923 -11.083h-.08a1 1 0 0 1 -.117 -1.993l.117 -.007h16z"
+                  stroke-width="0"
+                  fill="currentColor"></path><path
+                  d="M14 2a2 2 0 0 1 2 2a1 1 0 0 1 -1.993 .117l-.007 -.117h-4l-.007 .117a1 1 0 0 1 -1.993 -.117a2 2 0 0 1 1.85 -1.995l.15 -.005h4z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              >
+              </button>
+            </div>
+          </div>
+          `;
+      });
+      totalProducts.innerHTML = "";
+      totalProducts.innerHTML += `<div class="border-t border-b p-3 px-4 w-[90%] mx-auto text-[14px]">
+          <p class="flex items-center justify-between"><span>Subtotal:</span> <span>$${sumTotal}</span></p>
+          <p class="flex items-center justify-between"><span>Envío:</span> <span class="text-gray-400">El costo se calcula más adelante</span></p>
+        </div>
+        <div class="border-t p-2 px-4 w-[90%] mx-auto">
+          <p class="flex items-center justify-between font-bold text-2xl"><span>Total:</span><span>$${sumTotal}</span></p>
+          <p class="flex items-center justify-between text-[12px] font-bold p-2"><span></span><span class="text-[#c0392b]">O hasta 3 cuotas sin interés de $${(
+            sumTotal / 3
+          ).toFixed(2)}</span></p>
+        </div>
+        <div class="text-center pb-5">
+          <button class="text-center bg-black text-white p-3 rounded-[50px] w-[90%]" id="comprar-productos">I N I C I A R <span class="px-2"></span> C O M P R A</button>
+        </div>`;
+      const buttonsDelete = document.querySelectorAll(".buttonsDelete");
+      buttonsDelete.forEach((b) => {
+        b.addEventListener("click", deleteProductInCart);
+      });
+      numberCartProducts.textContent = JSON.parse(
+        localStorage.getItem("carrito"),
+      ).length;
+      const buyButton = document.getElementById("comprar-productos");
+      buyButton.addEventListener("click", buyProducts);
+    }
+  
+    //Eliminar producto en carrito
+    function deleteProductInCart() {
+      let cart = JSON.parse(localStorage.getItem("carrito"));
+      const idProduct = this.id;
+      cart = cart.filter((p) => p.id !== +idProduct);
+      localStorage.setItem("carrito", JSON.stringify(cart));
+      showProducts(JSON.parse(localStorage.getItem("carrito")));
+    }
+  
+    //Comprar productos en carrito
+    import Swal from "sweetalert2";
+    function buyProducts() {
+      function randomOrder() {
+        let order = "";
+        let x = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+        for (let i = 0; i < 5; i++) {
+          const randomNumber = Math.floor(Math.random() * x.length);
+          order += x[randomNumber];
+        }
+        return order;
+      }
+      Swal.fire({
+        title: "Compra Exitosa!",
+        text: `Orden de Compra: ${randomOrder()}`,
+        icon: "success",
+      });
+      localStorage.setItem("carrito", JSON.stringify([]));
+      showProducts(JSON.parse(localStorage.getItem("carrito")));
+    }
+  
+    showProducts(JSON.parse(localStorage.getItem("carrito")));
+  </script>
+  

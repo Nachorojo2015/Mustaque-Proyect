@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+    <p class="text-center text-[12px] pt-[150px]">Inicio > Contacto</p>
+    <h1 class="text-center font-bold text-[45px] md:text-[60px] mt-2">CONTACTO</h1>
+    <p class="text-center mt-12">¿Tenes alguna consulta, queres realizar un encargo? Contactate con nosotros.</p>
+    <div class="mx-auto w-[50%] mt-5"><p>Si te arrepentiste de una compra, podés pedir la cancelación enviando este formulario <span class="font-bold">con tu número de orden.</span> Tenés como máximo hasta 10 días corridos desde que recibiste el producto.</p></div>
+    <div class="flex flex-col items-center justify-center mt-3 space-y-5 md:w-[50%] w-[90%] mx-auto">
+        <input type="text" placeholder="Nombre" class="w-full p-2 rounded-[50px] border border-gray-300 placeholder:text-[12px] placeholder:pl-1">
+        <input type="text" placeholder="Email" class="w-full p-2 rounded-[50px] border border-gray-300 placeholder:text-[12px] placeholder:pl-1">
+        <input type="text" placeholder="Teléfono" class="w-full p-2 rounded-[50px] border border-gray-300 placeholder:text-[12px] placeholder:pl-1">
+        <textarea name="" id="" cols="85" rows="7" placeholder="Mensaje" class="w-full rounded-[20px] placeholder:p-2 placeholder:text-[12px] border border-gray-300"></textarea>
+    </div>
+    <div class="text-center mx-auto w-[30%] md:w-[10%] p-3 mt-5 bg-black rounded-[50px] text-white"><button>E N V I A R</button></div>
+</Layout>
