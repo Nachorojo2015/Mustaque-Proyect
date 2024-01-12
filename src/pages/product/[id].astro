@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import products from "../../../products.json";
+
 export function getStaticPaths() {
     return products.map((p) => ({ params: { id: p.id } }));
 }
@@ -296,7 +297,7 @@ const relatedProducts = products.filter(
 
     //Recuperar todos los productos
     async function getProducts() {
-        const respuesta = await fetch("../../products.json");
+        const respuesta = await fetch("../../../products.json");
         const productos = await respuesta.json();
         return productos;
     }
