@@ -296,12 +296,9 @@ const relatedProducts = products.filter(
     import Swal from "sweetalert2";
 
     //Recuperar todos los productos
-    async function getProducts() {
-        const respuesta = await fetch("../../../products.json");
-        const productos = await respuesta.json();
-        return productos;
-    }
-    const TOTAL_PRODUCTS = await getProducts();
+    import products from "../../../products.json"
+   
+    const TOTAL_PRODUCTS = products
 
     //Agregar producto al carrito
     const buttonAgregarAlCarrito = document.querySelector(".agregarCarrito");
@@ -313,7 +310,7 @@ const relatedProducts = products.filter(
         ) as HTMLInputElement;
         const value = quantityProduct.value;
         const product = TOTAL_PRODUCTS.find((p) => p.id === +idProduct);
-        product.quantity = +value;
+        product["quantity"] = +value;
         if (localStorage.getItem("carrito")) {
             const carrito = JSON.parse(localStorage.getItem("carrito"));
             if (carrito.find((p) => p.id === +idProduct)) {
