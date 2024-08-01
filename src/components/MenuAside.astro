@@ -1,0 +1,63 @@
+---
+import Close from "../icons/Close.astro";
+import ArrowDown from "../icons/ArrowDown.astro";
+---
+
+<div
+  class="-translate-x-[600px] bg-black text-white w-[70%] xl:w-[25%] h-dvh absolute top-0 left-0 transition"
+  id="menu"
+>
+  <Close />
+  <ul class="mt-5 ml-3 font-bold flex flex-col gap-3">
+    <a href="/">INICIO</a>
+    <li class="text-sm cursor-pointer" id="productosNavbar">
+      PRODUCTOS
+      <ArrowDown />
+    </li>
+    <div id="productos-section" class="flex-col ml-3 gap-2 hidden text-sm">
+      <a href="/allProducts">Ver todos los productos</a>
+      <a href="/Buzos">HOODIES/BUZOS</a>
+      <a href="/Remerones">REMERONES</a>
+      <a href="/Pantalones">PANTALONES</a>
+      <a href="/Shorts">SHORTS</a>
+      <a href="/Conjuntos">CONJUNTOS</a>
+      <li id="accesoriosNavbar" class="cursor-pointer">
+        ACCESORIOS
+        <ArrowDown />
+      </li>
+    </div>
+    <div
+      class="mx-3 text-sm hidden flex-col gap-3"
+      id="accesorios-section"
+    >
+      <a href="/allAccesories">Ver todo en ACCESORIOS</a>
+      <a href="/Gorros">GORROS</a>
+      <a href="/Medias">MEDIAS</a>
+    </div>
+    <a href="/stores">STORES</a>
+    <a href="/como-comprar">CÓMO COMPRAR</a>
+    <a href="/preguntas-frecuentes">PREGUNTAS FRECUENTES</a>
+    <a href="/politica-de-cambios">POLÍTICA DE CAMBIOS</a>
+  </ul>
+</div>
+
+<script>
+  const accesoriosSection = document.getElementById("accesorios-section");
+  const productosNavbar = document.getElementById("productosNavbar");
+  const productosSection = document.getElementById("productos-section");
+  const accesoriosNavbar = document.getElementById("accesoriosNavbar");
+
+  function showProducts() {
+    productosSection.classList.toggle("hidden");
+    productosSection.classList.toggle("flex");
+    accesoriosSection.classList.add("hidden");
+  }
+
+  function showAccesories() {
+    accesoriosSection.classList.toggle("hidden");
+    accesoriosSection.classList.toggle("flex");
+  }
+
+  productosNavbar.addEventListener("click", showProducts);
+  accesoriosNavbar.addEventListener("click", showAccesories);
+</script>

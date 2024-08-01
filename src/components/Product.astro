@@ -1,0 +1,60 @@
+---
+const { id, img, name, price } = Astro.props;
+---
+
+<div class="shadow-md w-full mt-5" id="product">
+  <span
+    class="p-2 m-2 rounded-full bg-red-700 px-2 text-center text-sm font-bold text-white absolute z-10"
+  >
+    30% OFF
+  </span>
+  <div class="w-full mx-auto object-cover">
+    <a href={`product/${id}`}>
+      <img src={img} alt="" />
+    </a>
+  </div>
+  <div class="text-center mt-2 p-2">
+    <p class="text-sm font-medium">{name}</p>
+    <p class="font-bold">
+      ${price}{" "}
+      <span class="text-gray-300">
+        <del>
+          $
+          {price + (price * 30) / 100}
+        </del>
+      </span>
+    </p>
+    <p class="text-xs">
+      <b>3</b> cuotas sin interés de{" "}
+      <b>${(price / 3).toFixed(2)}</b>
+    </p>
+    <a href={`product/${id}`} class="hover:text-orange-500 duration-150">
+      <strong>Ver más detalles</strong>
+    </a>
+  </div>
+</div>
+
+<style>
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  #product {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+</style>

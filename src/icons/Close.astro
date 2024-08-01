@@ -14,3 +14,19 @@
     d="M20 12l-10 0"></path><path d="M20 12l-4 4"></path><path d="M20 12l-4 -4"
   ></path><path d="M4 4l0 16"></path></svg
 >
+
+<script>
+  const $buttonCloseMenu = document.getElementById("cerrar-menu");
+  const $menuAside = document.getElementById("menu");
+  const $buttonCart = document.getElementById("cart-menu");
+
+  function closeMenuAside() {
+    $menuAside.classList.toggle("-translate-x-[600px]");
+    document.body.classList.remove("overflow-hidden");
+    $buttonCart.classList.remove("pointer-events-none");
+    document.getElementById("main").classList.remove("cursor-pointer");
+  }
+
+  // Cerrar menu lateral
+  $buttonCloseMenu.addEventListener("click", closeMenuAside);
+</script>

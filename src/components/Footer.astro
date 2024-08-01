@@ -3,35 +3,18 @@ import Instagram from "../icons/Instagram.astro";
 import Twitter from "../icons/Twitter.astro";
 import Whatsapp from "../icons/Whatsapp.astro";
 import Mail from "../icons/Mail.astro";
+import Payments from "./Payments.astro";
 ---
 
-<a
-  href=""
-  class="fixed bottom-0 right-0 p-2 m-4 bg-green-500 rounded-[100%] shadow-xl"
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-brand-whatsapp text-white"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke-width="2"
-    stroke="currentColor"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path><path
-      d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
-    ></path></svg
-  ></a
->
+<i class="fixed bottom-0 right-0 p-2 m-4 bg-green-500 rounded-[100%] shadow-xl"
+  ><Whatsapp color="white"/></i
 >
 <footer class="mt-20">
   <a href="/"
     ><img
       src="/img/logos/logo-mustaque.png"
-      alt=""
-      class="w-[50%] md:w-[10%] mx-auto"
+      alt="logue-store"
+      class="w-[50%] xl:w-[10%] mx-auto"
     /></a
   >
   <div
@@ -62,91 +45,12 @@ import Mail from "../icons/Mail.astro";
       </div>
     </nav>
     <div class="flex justify-center mt-8 space-x-6">
-      <a href="#">
-        <Instagram />
-      </a>
-      <a href="#">
-        <Twitter />
-      </a>
-      <a href="#">
-        <Whatsapp />
-      </a>
-      <a href="#">
-        <Mail />
-      </a>
+      <Instagram width="24" height="24"/>
+      <Twitter />
+      <Whatsapp color="black" />
+      <Mail />
     </div>
-    <div class="flex flex-wrap items-center justify-center space-x-2 space-y-2">
-      <img
-        src="/img/method-pays/visa.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1 mt-2"
-      />
-      <img
-        src="/img/method-pays/mastercard.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/american-express.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/dinners-club.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/paypal.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/banelco.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/cabal.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/naranja.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/tarjeta-shopping.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/mercado-pago.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/argencard.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/cencosud.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/pago-facil.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-      <img
-        src="/img/method-pays/rapipago.png"
-        alt=""
-        class="w-auto max-h-[35px] border p-1"
-      />
-    </div>
+    <Payments />
     <p class="mt-8 text-base leading-6 text-center">
       © 2023 Mustaque, Inc. All rights reserved.
     </p>

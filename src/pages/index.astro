@@ -1,207 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import products from "../../products.json";
-import Truck from "../icons/Truck.astro";
-import CreditCard from "../icons/CreditCard.astro";
-import Lock from "../icons/Lock.astro";
-import Insta from "../icons/Insta.astro";
+import Banner from "../components/Banner.astro";
+import Info from "../components/Info.astro";
+import Product from "../components/Product.astro";
+import Social from "../components/Social.astro";
 
 const firstProducts = products.slice(0, 9);
 ---
 
 <Layout title="Tienda Online de Mustaque Proyecto">
-    <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide p-[20px] hidden md:inline-block"
-        data-bs-ride="carousel"
-    >
-        <div class="carousel-inner w-full">
-            <div class="carousel-item active">
-                <img
-                    src="img/banner-images/expect-1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-            <div class="carousel-item">
-                <img
-                    src="img/banner-images/expect-2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-            <div class="carousel-item">
-                <img
-                    src="img/banner-images/expect-3.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-            <div class="carousel-item">
-                <img
-                    src="img/banner-images/expect-4.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-            <div class="carousel-item">
-                <img
-                    src="img/banner-images/expect-5.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-            <div class="carousel-item">
-                <img
-                    src="img/banner-images/expect-6.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                />
-            </div>
-        </div>
-        <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-        >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-        >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- Mobile Image -->
-    <img
-        src="/img/banner-images/mobile-images/fondo-mobile.jpg"
-        alt=""
-        class="inline-block md:hidden w-full p-3"
-    />
-    <!--  -->
-    <div
-        class="flex flex-wrap items-center justify-around text-[20px] mt-[30px] text-center p-2"
-    >
-        <div class="p-5">
-            <Truck />
-            <p>Envios a todo el país</p>
-        </div>
-        <div class="p-5">
-            <CreditCard />
-            <p>Hasta 3 cuotas sin interes</p>
-        </div>
-        <div class="p-5">
-            <Lock />
-            <p>Compra de manera segura</p>
-        </div>
-    </div>
-    <h2 class="text-center font-bold text-[40px] mt-20">
-        Productos destacados
-    </h2>
-    <section class="flex flex-wrap items-center justify-around space-y-6 mt-5">
-        {
-            firstProducts.map((product) => (
-                <div class="shadow-md w-[90%] md:w-[23%] mt-5" id="product">
-                    <span class="p-2 m-2 rounded-full bg-red-700 px-2 text-center text-sm font-bold text-white absolute z-10">
-                        30% OFF
-                    </span>
-                    <div class="w-full mx-auto object-cover">
-                        <a href={`product/${product.id}`}>
-                            <img src={product.img} alt="" />
-                        </a>
-                    </div>
-                    <div class="text-center mt-2 p-2">
-                        <p class="text-sm font-medium">{product.name}</p>
-                        <p class="font-bold">
-                            ${product.price}{" "}
-                            <span class="text-gray-300">
-                                <del>
-                                    $
-                                    {product.price + (product.price * 30) / 100}
-                                </del>
-                            </span>
-                        </p>
-                        <p class="text-xs">
-                            <b>3</b> cuotas sin interés de{" "}
-                            <b>${(product.price / 3).toFixed(2)}</b>
-                        </p>
-                        <a
-                            href={`product/${product.id}`}
-                            class="hover:text-orange-500 duration-150"
-                        >
-                            <strong>Ver más detalles</strong>
-                        </a>
-                    </div>
-                </div>
-            ))
-        }
-    </section>
-    <div class="text-center mt-52 mx-auto">
-        <h1 class="font-bold text-[30px] md:text-[70px]">
-            <Insta /> Mustaque.arg
-        </h1>
-        <button
-            type="button"
-            class="text-white mt-2 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-[20px] text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-            >Seguinos</button
-        >
-    </div>
-    <h3 class="font-bold text-center text-[25px] md:text-[60px] mt-40">
-        Mustaqe Indumentaria S.A.
-    </h3>
-    <p class="text-center text-[20px] mt-2">Todos los derechos reservados.</p>
-    <h4 class="text-center font-bold mt-24 text-[25px] md:text-[45px]">
-        Recibí todas las ofertas
-    </h4>
-    <div class="p-10">
-        <p class="text-center mt-10">
-            ¿Querés recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a
-            disfrutarlas!
-        </p>
-    </div>
-    <div class="flex items-center justify-center">
-        <input
-            type="text"
-            placeholder="Email"
-            class="w-[60%] rounded-[20px] p-2 border mt-4 placeholder-opacity-0 focus:placeholder-opacity-100"
+  <Banner />
+  <Info />
+  <h2 class="text-center font-bold text-[40px] mt-20">Productos destacados</h2>
+  <section class="grid xl:grid-cols-4 gap-3 px-3 grid-cols-1">
+    {
+      firstProducts.map((product) => (
+        <Product
+          id={product.id}
+          img={product.img}
+          name={product.name}
+          price={product.price}
         />
-    </div>
-    <div class="text-center">
-        <button
-            type="button"
-            class="text-white mt-2 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-[20px] text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-            >Enviar</button
-        >
-    </div>
+      ))
+    }
+  </section>
+  <Social />
 </Layout>
-
-<style>
-    @keyframes show {
-        from {
-            opacity: 0;
-            scale: 25%;
-        }
-
-        to {
-            opacity: 1;
-            scale: 100%;
-        }
-    }
-
-    #product {
-        view-timeline-name: --image;
-        view-timeline-axis: block;
-
-        animation-timeline: --image;
-        animation-name: show;
-
-        animation-range: entry 25% cover 50%;
-        animation-fill-mode: both;
-    }
-</style>

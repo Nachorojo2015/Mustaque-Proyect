@@ -1,7 +1,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   id="icono-menu"
-  class="icon icon-tabler icon-tabler-menu-2 cursor-pointer text-white"
+  class="icon icon-tabler icon-tabler-menu-2 cursor-pointer text-white ml-2"
   width="24"
   height="24"
   viewBox="0 0 24 24"
@@ -13,3 +13,27 @@
   ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 6l16 0"
   ></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"></path></svg
 >
+
+<script>
+  const $menuIcon = document.getElementById("icono-menu");
+  const $menuAside = document.getElementById("menu");
+  const $buttonCart = document.getElementById("cart-menu");
+
+  function openMenuAside() {
+    document.body.classList.add("overflow-hidden")
+    $menuAside.classList.toggle("-translate-x-[600px]");
+    $buttonCart.classList.add("pointer-events-none");
+    document.getElementById("main").classList.add("cursor-pointer");
+    document.getElementById("main").addEventListener("click", closeOpacityBody);
+  }
+
+  function closeOpacityBody() {
+    document.body.classList.remove("overflow-hidden");
+    $menuAside.classList.add("-translate-x-[600px]");
+    document.getElementById("main").classList.remove("cursor-pointer");
+    $buttonCart.classList.remove("pointer-events-none");
+  }
+
+  // Abrir menu lateral
+  $menuIcon.addEventListener("click", openMenuAside);
+</script>

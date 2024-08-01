@@ -1,0 +1,120 @@
+---
+import Cash from "../icons/Cash.astro";
+import ArrowDown from "../icons/ArrowDown.astro";
+import SmallCreditCard from "../icons/SmallCreditCard.astro";
+import Counter from "../components/Counter";
+const { img, name, price, id } = Astro.props;
+---
+
+<div class="w-full md:w-[50%]">
+  <img src={img} alt="product"/>
+</div>
+<div class="p-5">
+  <p class="p-2 text-[12px] pt-5">
+    Inicio > {name}
+  </p>
+  <h2 class="text-3xl font-bold p-1">{name}</h2>
+  <p class="p-2 font-bold">
+    ${price}
+    <span class="text-gray-400 ml-5"><del>${price + 25000}</del></span>
+    <span
+      class="ml-2 p-1 rounded-full bg-red-700 px-2 text-center text-sm font-medium text-white"
+    >
+      30% OFF
+    </span>
+  </p>
+  <p class="text-[#c0392b] font-bold p-2">
+    <span><SmallCreditCard /></span>
+
+    3 cuotas sin interés de ${(price / 3).toFixed(2)}
+  </p>
+  <p class="p-2">
+    <span><Cash /></span>
+    <span class="text-[#c0392b] font-bold">10% de descuento</span>
+    pagando con TRANSFERENCIA <br /> BANCARIA
+  </p>
+  <div class="flex items-center justify-center space-x-7 flex-wrap mt-3">
+    <div class="p-2">
+      <p class="pl-2 mb-1 text-[12px]">Color</p>
+      <input
+        type="text"
+        list="colors"
+        placeholder="Beige"
+        class="border rounded-[20px] p-2 placeholder:text-black"
+      /><span><ArrowDown /></span>
+      <datalist id="colors">
+        <option>Negro</option>
+        <option>Blanco</option>
+        <option>Beige</option>
+      </datalist>
+    </div>
+    <div class="mx-auto">
+      <p class="pl-2 mb-1 text-[12px]">Talle</p>
+      <input
+        type="text"
+        list="talles"
+        placeholder="XS"
+        class="border rounded-[20px] p-2 placeholder:text-black"
+      /><span><ArrowDown /></span>
+      <datalist id="talles">
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+      </datalist>
+    </div>
+  </div>
+  <div class="custom-number-input h-10 w-32 mt-3 pl-1">
+    <label
+      class="w-full text-gray-700 text-sm font-semibold"
+      >Cantidad
+    </label>
+    <Counter client:load/>
+  </div>
+  <button
+    class="bg-black text-white w-[100%] mt-[80px] p-2 pt-3 pb-3 rounded-[30px] agregarCarrito"
+    id={id}>AGREGAR AL CARRITO</button
+  >
+</div>
+
+<script>
+  import Swal from "sweetalert2";
+  import TOTAL_PRODUCTS from "../../products.json";
+
+  function addToCart(e) {
+    const idProduct = e.target.id;
+    const quantityProduct = document.getElementById("quantity") as HTMLInputElement;
+    const product = TOTAL_PRODUCTS.find((p) => p.id === +idProduct);
+    if (localStorage.getItem("carrito")) {
+      const cart = JSON.parse(localStorage.getItem("carrito"));
+      if (cart.find((p) => p.id === +idProduct)) {
+        const indexProduct = cart.findIndex((p) => p.id === +idProduct);
+        cart[indexProduct].quantity++;
+        localStorage.setItem("carrito", JSON.stringify(cart));
+      } else {
+        product["quantity"] = +quantityProduct.value;
+        cart.push(product);
+        localStorage.setItem("carrito", JSON.stringify(cart));
+      }
+    } else {
+      product["quantity"] = +quantityProduct.value;
+      const cart = [product];
+      localStorage.setItem("carrito", JSON.stringify(cart));
+    }
+    Swal.fire({
+      title: "Producto Agregado!",
+      text: `${product.name}`,
+      icon: "success",
+    });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000)
+  }
+
+  const buttonAgregarAlCarrito = document.querySelector(".agregarCarrito");
+
+  buttonAgregarAlCarrito.addEventListener("click", addToCart);
+ 
+</script>

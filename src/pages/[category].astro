@@ -1,84 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
 export function getStaticPaths() {
-    return [
-        { params: { category: "allProducts" } },
-        { params: { category: "Buzos" } },
-        { params: { category: "Remerones" } },
-        { params: { category: "Pantalones" } },
-        { params: { category: "Shorts" } },
-        { params: { category: "Bermudas" } },
-        { params: { category: "Conjuntos" } },
-        { params: { category: "allAccesories" } },
-        { params: { category: "Gorros" } },
-        { params: { category: "Medias" } },
-    ];
+  return [
+    { params: { category: "allProducts" } },
+    { params: { category: "Buzos" } },
+    { params: { category: "Remerones" } },
+    { params: { category: "Pantalones" } },
+    { params: { category: "Shorts" } },
+    { params: { category: "Bermudas" } },
+    { params: { category: "Conjuntos" } },
+    { params: { category: "allAccesories" } },
+    { params: { category: "Gorros" } },
+    { params: { category: "Medias" } },
+  ];
 }
 import products from "../../products.json";
+import Product from "../components/Product.astro";
 const { category } = Astro.params;
 
 const PRODUCTS = products.filter((p) =>
-    category === "allProducts"
-        ? p.name
-        : category === "allAccesories"
-          ? p.accessory
-          : p.category === category,
+  category === "allProducts"
+    ? p.name
+    : category === "allAccesories"
+      ? p.accessory
+      : p.category === category
 );
 ---
 
 <Layout title={`${category}`}>
-    <p class="text-center text-[12px] pt-[150px]">
-        Inicio > {
-            category === "allProducts"
-                ? "PRODUCTOS"
-                : category === "allAccesories"
-                  ? "ACCESORIOS"
-                  : category.toUpperCase()
-        }
-    </p>
-    <h1 class="text-center font-bold text-[45px] md:text-[60px] mt-2">
-        {
-            category === "allProducts"
-                ? "PRODUCTOS"
-                : category === "allAccesories"
-                  ? "ACCESORIOS"
-                  : category.toUpperCase()
-        }
-    </h1>
-    <section class="flex flex-wrap items-center justify-around space-y-6 mt-5">
-        {
-            PRODUCTS.map((product) => (
-                <div class="shadow-md w-[90%] md:w-[23%] mt-5" id="product">
-                    <span class="p-2 m-2 rounded-full bg-red-700 px-2 text-center text-sm font-bold text-white absolute z-10">
-                        30% OFF
-                    </span>
-                    <div class="w-full mx-auto object-cover">
-                        <a href={`/product/${product.id}`}><img src={product.img} alt=""/></a>
-                    </div>
-                    <div class="text-center mt-2 p-2">
-                        <p class="text-sm font-medium">{product.name}</p>
-                        <p class="font-bold">
-                            ${product.price}{" "}
-                            <span class="text-gray-300">
-                                <del>
-                                    $
-                                    {product.price + (product.price * 30) / 100}
-                                </del>
-                            </span>
-                        </p>
-                        <p class="text-xs">
-                            <b>3</b> cuotas sin interés de{" "}
-                            <b>${(product.price / 3).toFixed(2)}</b>
-                        </p>
-                        <a
-                            href={`/product/${product.id}`}
-                            class="hover:text-orange-500 duration-150"
-                        >
-                            <strong>Ver más detalles</strong>
-                        </a>
-                    </div>
-                </div>
-            ))
-        }
-    </section>
+  <p class="text-center text-[12px] pt-[150px]">
+    Inicio > {
+      category === "allProducts"
+        ? "PRODUCTOS"
+        : category === "allAccesories"
+          ? "ACCESORIOS"
+          : category.toUpperCase()
+    }
+  </p>
+  <h1 class="text-center font-bold text-[45px] md:text-[60px] mt-2">
+    {
+      category === "allProducts"
+        ? "PRODUCTOS"
+        : category === "allAccesories"
+          ? "ACCESORIOS"
+          : category.toUpperCase()
+    }
+  </h1>
+  <section class="grid xl:grid-cols-4 gap-3 px-3 grid-cols-1">
+    {
+      PRODUCTS.map((product) => (
+        <Product
+          id={product.id}
+          img={product.img}
+          name={product.name}
+          price={product.price}
+        />
+      ))
+    }
+  </section>
 </Layout>

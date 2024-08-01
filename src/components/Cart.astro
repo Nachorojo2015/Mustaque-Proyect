@@ -1,0 +1,49 @@
+---
+import ArrowClose from "../icons/ArrowClose.astro";
+import ProductsCart from "./ProductsCart";
+---
+
+<div
+  class="bg-zinc-800 text-white w-full xl:w-[35%] h-dvh absolute top-0 right-0 transition translate-x-[600px] overflow-y-scroll overflow-x-hidden z-[100]"
+  id="cart-menu-content"
+>
+  <div class="xl:flex items-center justify-around hidden">
+    <p class="mt-[50px] ml-[20px] text-2xl font-bold">Carrito de Compras</p>
+    <p class="mt-[50px] ml-[150px] text-xl cursor-pointer" id="close-cart-menu">
+      X
+    </p>
+  </div>
+  <!-- MOBILE CART -->
+  <ArrowClose />
+  <p class="mt-[50px] ml-[20px] text-2xl font-bold text-center block xl:hidden">
+    Carrito de Compras
+  </p>
+  <!--  -->
+  <ProductsCart client:load>
+</div>
+
+<script>
+  const $menuIcon = document.getElementById("icono-menu");
+  const $cartMenuContent = document.getElementById("cart-menu-content");
+  const $buttonCloseCart = document.getElementById("close-cart-menu");
+  const $buttonCloseCartMobile = document.getElementById(
+    "close-cart-menu-mobile"
+  );
+
+  function closeCart() {
+    $cartMenuContent.classList.add("translate-x-[600px]");
+    document.body.classList.remove("overflow-hidden");
+    $menuIcon.classList.remove("pointer-events-none");
+    document.getElementById("main").classList.remove("cursor-pointer");
+  }
+
+  function closeCartMobile() {
+    $cartMenuContent.classList.add("translate-x-[600px]");
+    document.body.classList.remove("overflow-hidden");
+    $menuIcon.classList.remove("pointer-events-none");
+    document.getElementById("main").classList.remove("cursor-pointer");
+  }
+
+  $buttonCloseCart.addEventListener("click", closeCart);
+  $buttonCloseCartMobile.addEventListener("click", closeCartMobile);
+</script>

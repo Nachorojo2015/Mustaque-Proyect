@@ -14,3 +14,27 @@
     d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
   ></path><path d="M9 11v-5a3 3 0 0 1 6 0v5"></path></svg
 >
+
+<script>
+  const $cartMenuContent = document.getElementById("cart-menu-content");
+  const $menuIcon = document.getElementById("icono-menu");
+  const $buttonCart = document.getElementById("cart-menu");
+
+  function closeOpacityBody() {
+    document.body.classList.remove("overflow-hidden");
+    $cartMenuContent.classList.add("translate-x-[600px]");
+    document.getElementById("main").classList.remove("cursor-pointer");
+    $menuIcon.classList.remove("pointer-events-none");
+  }
+
+  function openMenuCart() {
+    $cartMenuContent.classList.remove("translate-x-[600px]");
+    document.body.classList.add("overflow-hidden");
+    $menuIcon.classList.add("pointer-events-none");
+    document.getElementById("main").classList.add("cursor-pointer");
+    document.getElementById("main").addEventListener("click", closeOpacityBody);
+  }
+
+  //Mostrar el menu del carrito
+  $buttonCart.addEventListener("click", openMenuCart);
+</script>
